@@ -13,5 +13,6 @@ enum LocationError: Error {
     case disallowed
     case unableToFindLocation
     case uknownError
+    case unableToGetCoordinate
     
 }

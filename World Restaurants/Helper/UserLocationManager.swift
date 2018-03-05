@@ -10,19 +10,22 @@ import Foundation
 import CoreLocation
 import UIKit
 
-
+protocol UserLocationManagerDelegate : AnyObject {
+    func  locationUpdated(coordinate:Coordinate)
+}
 
 class UserLocationManager: NSObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
     var userAuthorizationStatus:CLAuthorizationStatus?
+    weak var delegate:UserLocationManagerDelegate?
     var userLocationCoordinate:Coordinate?
     weak var viewController:UIViewController?
     static let Shared = UserLocationManager()
      override init() {
         super.init()
         manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-         manager.requestLocation()
+        manager.desiredAccuracy = kCLLocationAccuracyKilometer
+      // manager.requestLocation()
     }
     func requestLocationAuthorization() throws {
         
@@ -56,11 +59,16 @@ class UserLocationManager: NSObject, CLLocationManagerDelegate {
         
     }
     
-     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else {return }
-        
-       self.userLocationCoordinate = Coordinate(location: location)
-       
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        var coordinate:Coordinate?
+        if let location = locations.last  {
+              coordinate = Coordinate(location: location)
+        }
+      print(locations.count)
+        self.userLocationCoordinate = coordinate
+       delegate?.locationUpdated(coordinate: coordinate!)
        
     }
     

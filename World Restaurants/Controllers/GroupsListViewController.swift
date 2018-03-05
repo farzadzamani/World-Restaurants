@@ -8,31 +8,32 @@
 
 import UIKit
 
-class GroupsListViewController: UITableViewController {
+class GroupsListViewController: UITableViewController,UserLocationManagerDelegate {
    
     var selectedCountryGroup:CountryGroup?
     var estimatedRowHeight:CGFloat?
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+       UserLocationManager.Shared.delegate = self
         let tableviewsize = tableView.frame.height - (self.tabBarController?.tabBar.frame.size.height)! - UIApplication.shared.statusBarFrame.height
         let heightPerRow = Float(tableviewsize) / Float(CountryGroup.allGroup.count)
         estimatedRowHeight = CGFloat(heightPerRow)
+         requestLocationPermission()
         
-    
       
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        requestLocationPermission()
-        
-        
+       
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.navigationBar.isHidden = true
         tabBarController?.tabBar.isHidden = false
+       
+        
     }
     
     func requestLocationPermission() {
@@ -44,8 +45,12 @@ class GroupsListViewController: UITableViewController {
         }
     }
     
- 
-
+    func locationUpdated(coordinate: Coordinate) {
+         self.performSegue(withIdentifier: "restaurantListSeque", sender: nil)
+        
+        self.navigationController?.navigationBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = true
+    }
 
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -73,9 +78,10 @@ class GroupsListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCountryGroup = CountryGroup.allGroup[indexPath.row]
-        performSegue(withIdentifier: "restaurantListSeque", sender: nil)
-        navigationController?.navigationBar.isHidden = false
-        tabBarController?.tabBar.isHidden = true
+        UserLocationManager.Shared.requestLocation()
+   
+       
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "restaurantListSeque" {
@@ -83,6 +89,7 @@ class GroupsListViewController: UITableViewController {
             
             if let vc:RestaurantListViewController = segue.destination as? RestaurantListViewController {
                 vc.countryGroup = self.selectedCountryGroup
+                vc.coordinate = UserLocationManager.Shared.userLocationCoordinate
             }
             
         }

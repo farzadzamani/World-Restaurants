@@ -10,16 +10,16 @@ import UIKit
 import NVActivityIndicatorView
 import MapKit
 
-class RestaurantListViewController: UIViewController {
+class RestaurantListViewController: UIViewController{
 
     
     
     @IBOutlet weak var mapView: MKMapView!
     let dataSource = ResturantListDataSource()
-    
+    var coordinate:Coordinate?
     var countryGroup:CountryGroup?
     var country:Country?
-    
+    var locationManager:UserLocationManager?
     @IBOutlet weak var tableView: UITableView!
  
   
@@ -27,20 +27,25 @@ class RestaurantListViewController: UIViewController {
         super.viewDidLoad()
         mapView.delegate = self
         
-        setupTableView()
-        loadRestaurantList()
-        UserLocationManager.Shared.viewController = self
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-         self.navigationController?.navigationBar.tintColor = UIColor.yellow
-       self.navigationController?.navigationBar.isHidden = false
-       
-       
-       
-    }
-    func loadRestaurantList() {
         
+       
+        setupTableView()
+       loadRestaurantList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       super.viewWillAppear(true)
+       self.navigationController?.navigationBar.tintColor = UIColor.yellow
+       self.navigationController?.navigationBar.isHidden = false
+      
+        
+    }
+    
+ 
+    
+    func loadRestaurantList() {
+        print("load restaurant")
+        if let coordinate = coordinate {
         let activityData = ActivityData()
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
         
@@ -49,13 +54,14 @@ class RestaurantListViewController: UIViewController {
             term = country.country
         }else { term = countryGroup!.name}
         
-        UserLocationManager.Shared.requestLocation()
-        guard let coordinate = UserLocationManager.Shared.userLocationCoordinate else {return}
+        
        
-        YelpClient.Shared.getRestaurants(searchTerm: term, at: coordinate) {[weak self] result in
+          
+     
+        YelpClient.Shared.getRestaurants(searchTerm: term, at: self.coordinate!) {[weak self] result in
             switch result {
             case .success(let restaurants):
-                self?.addRestaurantAnotaions(userLocation:coordinate,restaurants: restaurants)
+                self?.addRestaurantAnotaions(userLocation:(self?.coordinate)!,restaurants: restaurants)
                 self?.dataSource.update(with: restaurants, countryGroup: self?.countryGroup)
                 self?.tableView.reloadData()
                   NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
@@ -64,6 +70,7 @@ class RestaurantListViewController: UIViewController {
                 alert(view: self!, title: "Error", message: error.localizedDescription)
               
             }
+        }
         }
     }
    
@@ -144,5 +151,6 @@ extension RestaurantListViewController {
         }
     }
 }
+
 
 
