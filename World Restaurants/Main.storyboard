@@ -51,14 +51,14 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="h1c-Dt-Z9u">
                                                             <rect key="frame" x="5" y="0.0" width="355" height="56"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdfdsfdfsdfdsfds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk1-aC-8xq">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="221.66666666666666" height="56"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk1-aC-8xq">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="272.33333333333331" height="56"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasdasd" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-gy-Af5">
-                                                                    <rect key="frame" x="222.66666666666663" y="0.0" width="132.33333333333337" height="56"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasdasd" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-gy-Af5">
+                                                                    <rect key="frame" x="273.33333333333331" y="0.0" width="81.666666666666686" height="56"/>
                                                                     <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="17"/>
                                                                     <color key="textColor" red="0.97587805989999998" green="0.8187938333" blue="0.021897373719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -273,11 +273,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2ad-y3-soq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gbf-ay-JgY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="edY-SR-Iz6">
-                                <rect key="frame" x="5" y="94" width="365" height="601"/>
+                                <rect key="frame" x="5" y="6" width="365" height="601"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gx1-cb-huW">
                                         <rect key="frame" x="0.0" y="0.0" width="365" height="601"/>
@@ -558,6 +558,6 @@
         <image name="emptystar" width="30" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZE4-aC-yeg"/>
+        <segue reference="47f-uF-UZD"/>
     </inferredMetricsTieBreakers>
 </document>
