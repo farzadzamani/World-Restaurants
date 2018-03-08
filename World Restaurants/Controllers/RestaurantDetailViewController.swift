@@ -71,7 +71,7 @@ class RestaurantDetailViewController: UIViewController,UICollectionViewDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        currentHoursStatusLabel.text = "     "
         picturesCollectionView.delegate = self
         mapView.delegate = self
         
@@ -135,13 +135,13 @@ class RestaurantDetailViewController: UIViewController,UICollectionViewDelegate,
         ratingsCountLabel.text = viewModel.ratingsCount
         categoriesLabel.text = viewModel.categories
         hoursLabel.text = viewModel.hours
-        currentHoursStatusLabel.text = viewModel.currentStatus
+        currentHoursStatusLabel.text = "     "
         
     }
     
     @IBOutlet weak var currentHoursStatusLabel: UILabel! {
         didSet {
-            if currentHoursStatusLabel.text == "Open" {
+            if currentHoursStatusLabel.text == "     " {
                 currentHoursStatusLabel.textColor = UIColor(displayP3Red: 2/255.0, green: 192/255.0, blue: 97/255.0, alpha:  1.0)
                 
             } else {

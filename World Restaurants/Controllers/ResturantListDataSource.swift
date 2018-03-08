@@ -36,6 +36,9 @@ class ResturantListDataSource: NSObject, UITableViewDataSource{
 
            cell.restaurantdistance.text = "~ \(String(format:"%.2f",distance / 1609.34 )) mi"
         }
+       
+      
+        cell.viewWithTag(10)?.backgroundColor = countryGroup!.color
         
         cell.restaurantName.text = restaurant.name
        

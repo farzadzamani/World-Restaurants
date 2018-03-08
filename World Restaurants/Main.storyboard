@@ -37,6 +37,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReusableRestaurantList" id="bde-8w-bds" customClass="RestaurantListViewCell" customModule="World_Restaurants" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="60"/>
@@ -45,7 +46,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-3k-YfM" customClass="TableRowCartView" customModule="World_Restaurants" customModuleProvider="target">
+                                                <view tag="10" contentMode="scaleToFill" restorationIdentifier="tableRowCartView" translatesAutoresizingMaskIntoConstraints="NO" id="Rhv-3k-YfM" customClass="TableRowCartView" customModule="World_Restaurants" customModuleProvider="target">
                                                     <rect key="frame" x="5" y="2" width="365" height="56"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="h1c-Dt-Z9u">
@@ -60,13 +61,13 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasdasd" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-gy-Af5">
                                                                     <rect key="frame" x="273.33333333333331" y="0.0" width="81.666666666666686" height="56"/>
                                                                     <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="17"/>
-                                                                    <color key="textColor" red="0.97587805989999998" green="0.8187938333" blue="0.021897373719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.22742757201194763" green="0.2274659276008606" blue="0.22741925716400146" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.085952989760000001" green="0.1316483319" blue="0.20373448729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="h1c-Dt-Z9u" firstAttribute="leading" secondItem="Rhv-3k-YfM" secondAttribute="leading" constant="5" id="82s-ax-DvZ"/>
                                                         <constraint firstItem="h1c-Dt-Z9u" firstAttribute="top" secondItem="Rhv-3k-YfM" secondAttribute="top" id="IC4-mY-h9f"/>
@@ -78,11 +79,15 @@
                                                             <real key="value" value="7"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowOffSetWith">
-                                                            <integer key="value" value="1"/>
+                                                            <integer key="value" value="0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="Rhv-3k-YfM" firstAttribute="leading" secondItem="yW0-a1-Akt" secondAttribute="leading" constant="5" id="JSz-5f-ecM"/>
                                                 <constraint firstAttribute="bottom" secondItem="Rhv-3k-YfM" secondAttribute="bottom" constant="2" id="TVF-Ok-adG"/>
@@ -194,7 +199,7 @@
                             <color key="textColor" red="0.97587805989999998" green="0.8187938333" blue="0.021897373719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.97587805989999998" green="0.8187938333" blue="0.021897373719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -398,7 +403,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Open" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcJ-ll-nzu">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="----" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcJ-ll-nzu">
                                                         <rect key="frame" x="314" y="0.0" width="51" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="51" id="kMk-oK-nMN"/>
@@ -533,13 +538,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Ece-HY-dcn">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.97587805989999998" green="0.8187938333" blue="0.021897373719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.25487625598907471" green="0.25491833686828613" blue="0.25486710667610168" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.97587805989999998" green="0.8187938333" blue="0.021897373719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.97587805989999998" green="0.8187938333" blue="0.021897373719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T7h-t9-vCz">

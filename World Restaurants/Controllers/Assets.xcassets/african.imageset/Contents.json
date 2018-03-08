@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "african.pdf",
+      "filename" : "african.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "african@2x.pdf",
+      "filename" : "african@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "african@3x.pdf",
+      "filename" : "african@3x.png",
       "scale" : "3x"
     }
   ],

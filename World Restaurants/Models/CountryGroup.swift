@@ -45,12 +45,12 @@ extension CountryGroup {
     }
     var color:UIColor { 
         switch self {
-        case .medeterian: return UIColor(red: 30, green: 39, blue:  46)
-        case .asian: return UIColor(red: 72, green: 84, blue: 96)
-        case .african: return UIColor(red: 128, green: 142, blue: 155) 
-        case .american: return UIColor(red: 255, green: 192, blue: 72)
-        case .latinamerica: return UIColor(red: 255, green: 168, blue: 1)
-        case .eruopean: return UIColor(red: 128, green: 142, blue: 155)
+        case .medeterian: return UIColor(red: 49, green: 103, blue:  156)
+        case .asian: return UIColor(red: 55, green: 227, blue: 196)
+        case .african: return UIColor(red: 63, green: 186, blue: 87)
+        case .american: return UIColor(red: 61, green: 227, blue: 165)
+        case .latinamerica: return UIColor(red: 51, green: 200, blue: 225)
+        case .eruopean: return UIColor(red: 47, green: 228, blue: 223)
             
         }
 }
