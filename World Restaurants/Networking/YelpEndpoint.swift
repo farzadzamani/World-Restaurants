@@ -34,14 +34,17 @@ extension YelpEndpoint {
     
     var request: URLRequest {
         let url = urlComponents.url!
+        print("URL = \(url)")
         return URLRequest(url: url)
     }
   
     func requestWithAuthorizationHeader() -> URLRequest {
         var authrequest = request
-        let APIKEY = "8w3G0xly-Z87DGOPkDkwsn2AfK1Q5HmNKuZj0AvRmBSrA5_XyDL14NpCL7Mbi9gLVLcaY-EhtokE7JPJEqz8cPUZrRAMoPmQz8e9Uz9Au2a3lTI3M0q7hXeLnw10WnYx"
+         let APIKEY = "s2mT-L8ADncH4Rn2gXeLPjxt-WG1DX9c9Gm-6R1b9kwerHKebME1txghRGZFznTY_ZJS1YVJ0N6ccoxPmgpd0kiM1b7748AYxDGvQ--cLeAKCHv8bSj3gbS7vlIPW3Yx"
         authrequest.addValue("bearer \(APIKEY)", forHTTPHeaderField: "Authorization")
+        //print(authrequest.allHTTPHeaderFields)
         return authrequest
+        
     }
 }
 
@@ -85,7 +88,7 @@ extension Yelp: YelpEndpoint {
                 URLQueryItem(name: "latitude", value: coordinate.latitude.description),
                 URLQueryItem(name: "longitude", value: coordinate.longitude.description),
                 URLQueryItem(name: "radius", value: radius?.description),
-                URLQueryItem(name: "categories", value: categories.map({$0.alias}).joined(separator: ",")),
+//                URLQueryItem(name: "categories", value: categories.map({$0.alias}).joined(separator: ",")),
                 URLQueryItem(name: "limit", value: limit?.description),
                 URLQueryItem(name: "sort_by", value: sortBy?.description)
             ]

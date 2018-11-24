@@ -39,7 +39,7 @@ extension NetworkApiClient {
     
     func jsonTask(with request: URLRequest, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
         let task = session.dataTask(with: request) { data, response, error in
-            
+            print("Request = \(request.description)")
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(nil, .requestFailed)
                 return
@@ -57,6 +57,7 @@ extension NetworkApiClient {
                     completion(nil, .invalidData)
                 }
             } else {
+                print("Response = \(httpResponse.statusCode)")
                 completion(nil, .responseUnsuccessful)
             }
         }

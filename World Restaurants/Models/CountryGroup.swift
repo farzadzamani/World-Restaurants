@@ -16,8 +16,9 @@ enum CountryGroup {
     case american
     case latinamerica
     case eruopean
+    case vegeterian
    
-    static let allGroup = [african,american,asian,eruopean,latinamerica,medeterian]
+    static let allGroup = [american,medeterian,vegeterian,eruopean,african,latinamerica,asian]
 }
 extension CountryGroup {
     var name:String {
@@ -28,18 +29,29 @@ extension CountryGroup {
         case .american: return "American"
         case .latinamerica: return "Latin American"
         case .eruopean: return "European"
+        case .vegeterian: return "vegeterian"
         
         }
     }
         var image:UIImage {
             switch self {
-            case .medeterian: return #imageLiteral(resourceName: "mediterian")
-            case .asian: return #imageLiteral(resourceName: "asian")
-            case .african: return #imageLiteral(resourceName: "african")
-            case .american: return #imageLiteral(resourceName: "american")
-            case .latinamerica: return #imageLiteral(resourceName: "latim America")
-            case .eruopean: return #imageLiteral(resourceName: "eruo")
-           
+            case .medeterian: return UIImage(named: "mediSection")!
+            case .asian: return UIImage(named: "asianSection")!
+            case .african: return UIImage(named: "africanSection")!
+            case .american: return UIImage(named: "americanSection")!
+            case .latinamerica: return UIImage(named: "mexicanSection")!
+            case .eruopean: return UIImage(named: "euroSection")!
+           case .vegeterian: return UIImage(named: "vegiSection")!
+            }
+        var icon:UIImage {
+                switch self {
+                case .medeterian: return #imageLiteral(resourceName: "medetrianFoodCopy")
+                case .asian: return #imageLiteral(resourceName: "asianFood")
+                case .african: return #imageLiteral(resourceName: "africanFood")
+                case .american: return #imageLiteral(resourceName: "americanFood")
+                case .latinamerica: return #imageLiteral(resourceName: "mexicanFood")
+                case .eruopean: return #imageLiteral(resourceName: "euroFood")
+                case .vegeterian: return #imageLiteral(resourceName: "vegeterian")
             }
        
     }
@@ -51,6 +63,7 @@ extension CountryGroup {
         case .american: return UIColor(red: 61, green: 227, blue: 165)
         case .latinamerica: return UIColor(red: 51, green: 200, blue: 225)
         case .eruopean: return UIColor(red: 47, green: 228, blue: 223)
+         case .vegeterian: return UIColor(red: 47, green: 228, blue: 223)
             
         }
 }

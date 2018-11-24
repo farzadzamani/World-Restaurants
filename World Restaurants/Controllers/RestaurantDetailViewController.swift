@@ -206,7 +206,7 @@ class RestaurantDetailViewController: UIViewController,UICollectionViewDelegate,
                
                star.image = #imageLiteral(resourceName: "fullstar")
             }else if half != 0.0 {
-                 star.image = #imageLiteral(resourceName: "halfstar")
+                 star.image = #imageLiteral(resourceName: "halfstart")
                  half = 0.0
                
             }else {

@@ -32,6 +32,7 @@
 		CB81450820321756008A15E3 /* SavedRestaurantsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB81450720321756008A15E3 /* SavedRestaurantsExtention.swift */; };
 		CB81450C2032573C008A15E3 /* CountryGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB81450B2032573C008A15E3 /* CountryGroupViewCell.swift */; };
 		CB81450E20325A2B008A15E3 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB81450D20325A2B008A15E3 /* DatabaseManager.swift */; };
+		CB8A960F21A92B3800A53416 /* SavedRestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A960E21A92B3800A53416 /* SavedRestaurantViewCell.swift */; };
 		CBBA697720244EFA00CAB545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBA697620244EFA00CAB545 /* AppDelegate.swift */; };
 		CBBA698420244EFA00CAB545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBA698220244EFA00CAB545 /* LaunchScreen.storyboard */; };
 		CBBA698C20244F4D00CAB545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBA698B20244F4D00CAB545 /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		CB81450720321756008A15E3 /* SavedRestaurantsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRestaurantsExtention.swift; sourceTree = "<group>"; };
 		CB81450B2032573C008A15E3 /* CountryGroupViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryGroupViewCell.swift; sourceTree = "<group>"; };
 		CB81450D20325A2B008A15E3 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		CB8A960E21A92B3800A53416 /* SavedRestaurantViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRestaurantViewCell.swift; sourceTree = "<group>"; };
 		CBBA697320244EFA00CAB545 /* World Restaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Restaurants.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBBA697620244EFA00CAB545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBBA698320244EFA00CAB545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				CB0D71E620341F7A00BFB08D /* RestaurantListViewCell.swift */,
 				CBD4CC4F2034B36B00AA9FD8 /* Designable Helpers.swift */,
 				CBD4CC512034CE3300AA9FD8 /* Pin.swift */,
+				CB8A960E21A92B3800A53416 /* SavedRestaurantViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,7 +274,7 @@
 					New,
 				);
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Farzad Zamani";
 				TargetAttributes = {
 					CBBA697220244EFA00CAB545 = {
@@ -314,7 +317,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		436687865F43C3F9DDD35ADF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -332,7 +335,7 @@
 		};
 		631F2383CB431E853D024846 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -347,7 +350,7 @@
 		};
 		73B3EED1286A32624F7831AE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -389,6 +392,7 @@
 				CB81450E20325A2B008A15E3 /* DatabaseManager.swift in Sources */,
 				CBC9E886202E6CDA00C503FA /* RestaurantPicturesDataSource.swift in Sources */,
 				CBBFB600202BEB92004412EB /* NetworkApiClient.swift in Sources */,
+				CB8A960F21A92B3800A53416 /* SavedRestaurantViewCell.swift in Sources */,
 				CB6F8D972024E04D00841B83 /* JSONDecodable.swift in Sources */,
 				CB6F8D992024E08300841B83 /* YelpEndpoint.swift in Sources */,
 				CB81450C2032573C008A15E3 /* CountryGroupViewCell.swift in Sources */,
@@ -437,6 +441,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -444,6 +449,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -494,6 +500,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -501,6 +508,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -535,14 +543,14 @@
 			baseConfigurationReference = 0E3C2A03F8CC2E5ED8945760 /* Pods-World Restaurants.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NM274J9JZR;
 				INFOPLIST_FILE = "World Restaurants/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.farzadzamani.World-Restaurants";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -557,13 +565,12 @@
 			baseConfigurationReference = 25E7AB68427B1D9DCA159273 /* Pods-World Restaurants.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NM274J9JZR;
 				INFOPLIST_FILE = "World Restaurants/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.farzadzamani.World-Restaurants";
 				PRODUCT_NAME = "$(TARGET_NAME)";

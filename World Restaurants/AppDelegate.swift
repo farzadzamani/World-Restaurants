@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         }
         UIApplication.shared.statusBarStyle = .lightContent
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor(red: 65, green: 65, blue: 65)
+       UIApplication.shared.statusBarView?.backgroundColor = UIColor(red: 236, green: 103, blue: 69)
         return true
     }
 

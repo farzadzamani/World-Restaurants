@@ -84,10 +84,12 @@ class SavedRestaurantTableViewController: UITableViewController,NSFetchedResults
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseableSavedRestaurantCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReuseableSavedRestaurantCell", for: indexPath) as! SavedRestaurantViewCell
         let object = fetchResultController.sections?[indexPath.section].objects?[indexPath.row] as! SavedRestaurant
-        cell.textLabel?.text = object.name
-        //cell.textLabel?.textColor = CountryGroup.allGroup[indexPath.section].color
+        
+        cell.restaurantGroupName.text = object.name
+        
+        
         cell.textLabel?.textColor = CountryGroup.allGroup[indexPath.section].color
         cell.contentView.backgroundColor =  UIColor.white
         
