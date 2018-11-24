@@ -33,6 +33,7 @@
 		CB81450C2032573C008A15E3 /* CountryGroupViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB81450B2032573C008A15E3 /* CountryGroupViewCell.swift */; };
 		CB81450E20325A2B008A15E3 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB81450D20325A2B008A15E3 /* DatabaseManager.swift */; };
 		CB8A960F21A92B3800A53416 /* SavedRestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A960E21A92B3800A53416 /* SavedRestaurantViewCell.swift */; };
+		CB8A961121A9315400A53416 /* appTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A961021A9315400A53416 /* appTheme.swift */; };
 		CBBA697720244EFA00CAB545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBA697620244EFA00CAB545 /* AppDelegate.swift */; };
 		CBBA698420244EFA00CAB545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBA698220244EFA00CAB545 /* LaunchScreen.storyboard */; };
 		CBBA698C20244F4D00CAB545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBA698B20244F4D00CAB545 /* Main.storyboard */; };
@@ -79,6 +80,7 @@
 		CB81450B2032573C008A15E3 /* CountryGroupViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryGroupViewCell.swift; sourceTree = "<group>"; };
 		CB81450D20325A2B008A15E3 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		CB8A960E21A92B3800A53416 /* SavedRestaurantViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRestaurantViewCell.swift; sourceTree = "<group>"; };
+		CB8A961021A9315400A53416 /* appTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appTheme.swift; sourceTree = "<group>"; };
 		CBBA697320244EFA00CAB545 /* World Restaurants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Restaurants.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBBA697620244EFA00CAB545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBBA698320244EFA00CAB545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				CBD4CC4F2034B36B00AA9FD8 /* Designable Helpers.swift */,
 				CBD4CC512034CE3300AA9FD8 /* Pin.swift */,
 				CB8A960E21A92B3800A53416 /* SavedRestaurantViewCell.swift */,
+				CB8A961021A9315400A53416 /* appTheme.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB62A948202A5F6A001EBD43 /* GroupsListViewController.swift in Sources */,
+				CB8A961121A9315400A53416 /* appTheme.swift in Sources */,
 				CBBA69A12024547300CAB545 /* Restaurant.swift in Sources */,
 				CB6F8D8F2024DD6300841B83 /* CountryGroup.swift in Sources */,
 				CBBA69922024505700CAB545 /* RestaurantListViewController.swift in Sources */,

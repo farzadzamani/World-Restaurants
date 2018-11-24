@@ -88,10 +88,9 @@ class SavedRestaurantTableViewController: UITableViewController,NSFetchedResults
         let object = fetchResultController.sections?[indexPath.section].objects?[indexPath.row] as! SavedRestaurant
         
         cell.restaurantGroupName.text = object.name
-        
-        
-        cell.textLabel?.textColor = CountryGroup.allGroup[indexPath.section].color
-        cell.contentView.backgroundColor =  UIColor.white
+        cell.restaurantGroupIcon.image = CountryGroup.allGroup[indexPath.section].icon
+     
+        cell.contentView.backgroundColor =  
         
         return cell
     }

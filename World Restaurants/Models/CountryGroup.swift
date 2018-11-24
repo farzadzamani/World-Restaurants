@@ -21,6 +21,8 @@ enum CountryGroup {
     static let allGroup = [american,medeterian,vegeterian,eruopean,african,latinamerica,asian]
 }
 extension CountryGroup {
+   
+    
     var name:String {
         switch self {
         case .medeterian: return "Mediterranean"
@@ -43,6 +45,7 @@ extension CountryGroup {
             case .eruopean: return UIImage(named: "euroSection")!
            case .vegeterian: return UIImage(named: "vegiSection")!
             }
+    }
         var icon:UIImage {
                 switch self {
                 case .medeterian: return #imageLiteral(resourceName: "medetrianFoodCopy")
