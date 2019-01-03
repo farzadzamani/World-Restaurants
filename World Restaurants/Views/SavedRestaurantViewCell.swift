@@ -9,7 +9,7 @@
 import UIKit
 
 class SavedRestaurantViewCell: UITableViewCell {
-    @IBOutlet weak var restaurantGroupIcon:UIImageView!
+
     @IBOutlet weak var restaurantGroupName:UILabel!
     
     override func awakeFromNib() {

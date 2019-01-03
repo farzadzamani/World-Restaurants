@@ -26,9 +26,6 @@ class RestaurantListViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-        
-        
-       
         setupTableView()
        loadRestaurantList()
     }
@@ -52,12 +49,8 @@ class RestaurantListViewController: UIViewController{
         var term:String
         if let country = country {
             term = country.country
-        }else { term = countryGroup!.name}
+        } else { term = countryGroup!.name}
         
-        
-       
-          
-     
         YelpClient.Shared.getRestaurants(searchTerm: term, at: self.coordinate!) {[weak self] result in
             switch result {
             case .success(let restaurants):
@@ -79,8 +72,7 @@ class RestaurantListViewController: UIViewController{
         self.tableView.separatorColor = UIColor(white:0.95,alpha:1)
         self.tableView.dataSource = dataSource
         self.tableView.delegate = self
-//        self.tableView.rowHeight = UITableViewAutomaticDimension
-//        self.tableView.estimatedRowHeight = 150
+
         
     }
     
@@ -120,8 +112,9 @@ extension RestaurantListViewController:MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-       let pin = view.annotation as! Pin
+        if let pin = view.annotation as? Pin {
         performSegue(withIdentifier: "restaurantDetailSegue", sender: pin.restaurantId)
+        }
     }
     
 }

@@ -19,12 +19,7 @@ import UIKit
     @IBInspectable var shadowCapacity : Float = 0.2
     
     override func layoutSubviews() {
-//        layer.cornerRadius = cornerRadius
-//        layer.shadowColor = shadowColor?.cgColor
-//        layer.shadowOffset = CGSize(width: shadowOffSetWith, height: shadowOffHeight)
-//        let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
-//        layer.shadowPath = shadowPath.cgPath
-//        layer.shadowOpacity = shadowCapacity
+
         layer.cornerRadius = cornerRadius
         layer.shadowColor = shadowColor?.cgColor
         layer.shadowOffset = CGSize(width: shadowOffSetWith, height: shadowOffHeight)
@@ -36,3 +31,13 @@ import UIKit
 }
 
 
+@IBDesignable class CustomButton: UIButton {
+    @IBInspectable var cornerRadius : CGFloat = 0
+
+    
+    override func layoutSubviews() {
+        
+        layer.cornerRadius = cornerRadius
+        
+    }
+}

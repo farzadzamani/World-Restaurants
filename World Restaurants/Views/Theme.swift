@@ -8,17 +8,18 @@
 
 import Foundation
 import UIKit
-enum worldRestaurantTheme {
+
+public enum Theme {
     case listItemBackground
     
     
 }
 
-extension worldRestaurantTheme {
+extension Theme {
     var color:UIColor {
         switch self {
         case .listItemBackground: return UIColor(red: 255, green: 229, blue: 223)
-    
+        
             
         }
     }

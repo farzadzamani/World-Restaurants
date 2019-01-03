@@ -1,21 +1,15 @@
 //
-//  headerViewCell.swift
+//  RestaurantListheaderViewCell.swift
 //  World Restaurants
 //
-//  Created by Farzad on 2/13/18.
-//  Copyright © 2018 Farzad Zamani. All rights reserved.
+//  Created by Farzad on 1/3/19.
+//  Copyright © 2019 Farzad Zamani. All rights reserved.
 //
 
 import UIKit
 
-class headerViewCell: UITableViewCell {
+class RestaurantListheaderViewCell: UITableViewCell {
 
-    @IBOutlet weak var headerTitle: UILabel!
-    @IBOutlet weak var restaurantGroupIcon:UIImageView!
-    
-
-    @IBOutlet weak var collepseButton: UIButton!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
